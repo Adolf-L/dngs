@@ -1,3 +1,4 @@
-# 如下匹配的文件不进行跟踪
+# untrace these files and folders as blew
 /Pods
-
+DNGPS.xcworkspace
+Podfile.lock
