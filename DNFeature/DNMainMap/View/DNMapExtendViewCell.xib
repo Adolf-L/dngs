@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DNMapExtendViewCellIden" id="KGk-i7-Jjw" customClass="DNMapExtendViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="55.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DNFeature.bundle/ic_input" translatesAutoresizingMaskIntoConstraints="NO" id="G0D-k2-fVy">
+                        <rect key="frame" x="15" y="9" width="36" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="36" id="Otc-Cj-rHz"/>
+                            <constraint firstAttribute="height" constant="36" id="iT5-nA-Shq"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="输入经纬度" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qoB-Sr-F7l">
+                        <rect key="frame" x="66" y="19" width="71.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DNFeature.bundle/ic_more" translatesAutoresizingMaskIntoConstraints="NO" id="gSU-SX-w7C">
+                        <rect key="frame" x="297" y="19" width="8" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="8" id="4L6-O6-L6t"/>
+                            <constraint firstAttribute="height" constant="16" id="rpe-l9-3j9"/>
+                        </constraints>
+                    </imageView>
+                    <switch opaque="NO" tag="2001" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="blb-ND-Gbm">
+                        <rect key="frame" x="256" y="12" width="51" height="31"/>
+                        <connections>
+                            <action selector="onSwitchChange:" destination="KGk-i7-Jjw" eventType="valueChanged" id="Jr4-0G-DU8"/>
+                        </connections>
+                    </switch>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="blb-ND-Gbm" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="1Ha-kY-ECQ"/>
+                    <constraint firstItem="gSU-SX-w7C" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="AV0-MN-mTs"/>
+                    <constraint firstItem="G0D-k2-fVy" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="BWL-KW-6LL"/>
+                    <constraint firstItem="qoB-Sr-F7l" firstAttribute="leading" secondItem="G0D-k2-fVy" secondAttribute="trailing" constant="15" id="I3t-US-3UO"/>
+                    <constraint firstAttribute="trailing" secondItem="blb-ND-Gbm" secondAttribute="trailing" constant="15" id="Mvu-Bd-rVj"/>
+                    <constraint firstItem="qoB-Sr-F7l" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="dRV-RZ-T7E"/>
+                    <constraint firstItem="G0D-k2-fVy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="hgG-3x-YVq"/>
+                    <constraint firstAttribute="trailing" secondItem="gSU-SX-w7C" secondAttribute="trailing" constant="15" id="jVi-5A-H8j"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="itemImgView" destination="G0D-k2-fVy" id="bw7-Dl-UF1"/>
+                <outlet property="moreImgView" destination="gSU-SX-w7C" id="VwE-4G-kxl"/>
+                <outlet property="titleLabel" destination="qoB-Sr-F7l" id="Pie-93-TCr"/>
+                <outlet property="valueSwitch" destination="blb-ND-Gbm" id="xj4-of-OHM"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="DNFeature.bundle/ic_input" width="16" height="16"/>
+        <image name="DNFeature.bundle/ic_more" width="16" height="16"/>
+    </resources>
+</document>

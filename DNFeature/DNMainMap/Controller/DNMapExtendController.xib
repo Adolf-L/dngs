@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DNMapExtendController">
+            <connections>
+                <outlet property="extendView" destination="boE-pR-rou" id="N2e-ce-dgx"/>
+                <outlet property="extendViewTrailing" destination="bDW-l6-Dwo" id="Lg9-jp-lMd"/>
+                <outlet property="mapTypeViewToping" destination="8Xg-5I-uUi" id="BeX-Fk-yBb"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="mapTypeBtns" destination="IpE-dk-0Ne" id="589-f8-yHG"/>
+                <outletCollection property="mapTypeBtns" destination="t3e-wN-Oni" id="vui-Y1-RPV"/>
+                <outletCollection property="mapTypeBtns" destination="VXb-Vq-xYe" id="ANL-8o-an5"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="boE-pR-rou">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QYh-TO-scI" userLabel="LeftLine">
+                            <rect key="frame" x="0.0" y="0.0" width="1" height="667"/>
+                            <color key="backgroundColor" red="0.85098039219999999" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="mdK-e0-Ht3" customClass="NSLayoutConstraintOnePixelLine"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FeF-gW-crm" userLabel="MapTypeView">
+                            <rect key="frame" x="1" y="0.0" width="374" height="100"/>
+                            <subviews>
+                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IpE-dk-0Ne" userLabel="WeixingButton">
+                                    <rect key="frame" x="15" y="20" width="104.5" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="E4T-Zs-aIm"/>
+                                    </constraints>
+                                    <state key="normal" image="DNFeature.bundle/extension_weixingtu"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="3"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderUIColor">
+                                            <color key="value" red="0.15294117647058825" green="0.76862745098039209" blue="0.066666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="onChangeMapType:" destination="-1" eventType="touchUpInside" id="gvW-Ao-dNS"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3e-wN-Oni" userLabel="3DButton">
+                                    <rect key="frame" x="254.5" y="20" width="104.5" height="44"/>
+                                    <state key="normal" image="DNFeature.bundle/extension_3Dmap"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="3"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderUIColor">
+                                            <color key="value" red="0.15294117647058825" green="0.76862745098039209" blue="0.066666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="onChangeMapType:" destination="-1" eventType="touchUpInside" id="vwE-lz-ddw"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXb-Vq-xYe" userLabel="2DButton">
+                                    <rect key="frame" x="134.5" y="20" width="105" height="44"/>
+                                    <state key="normal" image="DNFeature.bundle/extension_2Dmap"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="3"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderUIColor">
+                                            <color key="value" red="0.15294117647058825" green="0.76862745098039209" blue="0.066666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                            <integer key="value" value="2"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="onChangeMapType:" destination="-1" eventType="touchUpInside" id="t2M-CP-zZ8"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="卫星图" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pdo-ky-x6g">
+                                    <rect key="frame" x="47" y="72" width="40" height="16"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2D平面图" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GER-FF-W6k">
+                                    <rect key="frame" x="158.5" y="72" width="57" height="16"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3D俯视图" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZS-VJ-Nhh">
+                                    <rect key="frame" x="277.5" y="72" width="57.5" height="16"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="t3e-wN-Oni" firstAttribute="top" secondItem="IpE-dk-0Ne" secondAttribute="top" id="0Tk-x3-os3"/>
+                                <constraint firstItem="IpE-dk-0Ne" firstAttribute="top" secondItem="FeF-gW-crm" secondAttribute="top" constant="20" id="0lo-TQ-Kqx"/>
+                                <constraint firstItem="t3e-wN-Oni" firstAttribute="leading" secondItem="VXb-Vq-xYe" secondAttribute="trailing" constant="15" id="2cI-xg-xQF"/>
+                                <constraint firstItem="Pdo-ky-x6g" firstAttribute="top" secondItem="IpE-dk-0Ne" secondAttribute="bottom" constant="8" id="5zd-CX-yI5"/>
+                                <constraint firstAttribute="trailing" secondItem="t3e-wN-Oni" secondAttribute="trailing" constant="15" id="6lE-tk-V2y"/>
+                                <constraint firstItem="VXb-Vq-xYe" firstAttribute="leading" secondItem="IpE-dk-0Ne" secondAttribute="trailing" constant="15" id="810-iN-GbX"/>
+                                <constraint firstItem="VXb-Vq-xYe" firstAttribute="top" secondItem="IpE-dk-0Ne" secondAttribute="top" id="8Sn-L0-QOa"/>
+                                <constraint firstItem="t3e-wN-Oni" firstAttribute="height" secondItem="IpE-dk-0Ne" secondAttribute="height" id="8wP-5c-J25"/>
+                                <constraint firstItem="GER-FF-W6k" firstAttribute="top" secondItem="Pdo-ky-x6g" secondAttribute="top" id="AGi-9J-KQk"/>
+                                <constraint firstItem="VXb-Vq-xYe" firstAttribute="width" secondItem="IpE-dk-0Ne" secondAttribute="width" id="Adc-tn-Gsh"/>
+                                <constraint firstItem="GER-FF-W6k" firstAttribute="centerX" secondItem="VXb-Vq-xYe" secondAttribute="centerX" id="E1N-6y-Iq6"/>
+                                <constraint firstItem="IpE-dk-0Ne" firstAttribute="leading" secondItem="FeF-gW-crm" secondAttribute="leading" constant="15" id="ET2-tE-mrp"/>
+                                <constraint firstItem="Pdo-ky-x6g" firstAttribute="centerX" secondItem="IpE-dk-0Ne" secondAttribute="centerX" id="Gn3-tx-ryo"/>
+                                <constraint firstItem="VXb-Vq-xYe" firstAttribute="height" secondItem="IpE-dk-0Ne" secondAttribute="height" id="fQG-g0-IH0"/>
+                                <constraint firstItem="MZS-VJ-Nhh" firstAttribute="top" secondItem="Pdo-ky-x6g" secondAttribute="top" id="hyT-o7-7JC"/>
+                                <constraint firstItem="MZS-VJ-Nhh" firstAttribute="centerX" secondItem="t3e-wN-Oni" secondAttribute="centerX" id="kXo-Xm-jes"/>
+                                <constraint firstItem="t3e-wN-Oni" firstAttribute="width" secondItem="IpE-dk-0Ne" secondAttribute="width" id="npp-6C-KlF"/>
+                                <constraint firstAttribute="height" constant="100" id="ova-cf-boj"/>
+                            </constraints>
+                        </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sKX-6W-211">
+                            <rect key="frame" x="1" y="100" width="374" height="567"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="Jsf-PA-J2L"/>
+                                <outlet property="delegate" destination="-1" id="fof-1d-Eiz"/>
+                            </connections>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="FeF-gW-crm" firstAttribute="top" secondItem="boE-pR-rou" secondAttribute="top" id="8Xg-5I-uUi"/>
+                        <constraint firstAttribute="bottom" secondItem="sKX-6W-211" secondAttribute="bottom" id="DMO-Do-02r"/>
+                        <constraint firstItem="QYh-TO-scI" firstAttribute="leading" secondItem="boE-pR-rou" secondAttribute="leading" id="Kc4-el-9N0"/>
+                        <constraint firstAttribute="bottom" secondItem="QYh-TO-scI" secondAttribute="bottom" id="LqU-0T-b2p"/>
+                        <constraint firstAttribute="trailing" secondItem="sKX-6W-211" secondAttribute="trailing" id="NDB-h4-Oxm"/>
+                        <constraint firstItem="FeF-gW-crm" firstAttribute="leading" secondItem="QYh-TO-scI" secondAttribute="trailing" id="NJz-K4-wiU"/>
+                        <constraint firstAttribute="trailing" secondItem="FeF-gW-crm" secondAttribute="trailing" id="Nyp-q6-wdI"/>
+                        <constraint firstItem="QYh-TO-scI" firstAttribute="top" secondItem="boE-pR-rou" secondAttribute="top" id="W6d-gh-BQr"/>
+                        <constraint firstItem="sKX-6W-211" firstAttribute="top" secondItem="FeF-gW-crm" secondAttribute="bottom" id="pWs-xR-K0i"/>
+                        <constraint firstItem="sKX-6W-211" firstAttribute="leading" secondItem="QYh-TO-scI" secondAttribute="trailing" id="ptg-W5-9rk"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="boE-pR-rou" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="U2b-7D-Qy8"/>
+                <constraint firstAttribute="trailing" secondItem="boE-pR-rou" secondAttribute="trailing" id="bDW-l6-Dwo"/>
+                <constraint firstItem="boE-pR-rou" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="z47-dl-Xw1"/>
+                <constraint firstAttribute="bottom" secondItem="boE-pR-rou" secondAttribute="bottom" id="zjg-im-rhH"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="71.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="DNFeature.bundle/extension_2Dmap" width="16" height="16"/>
+        <image name="DNFeature.bundle/extension_3Dmap" width="16" height="16"/>
+        <image name="DNFeature.bundle/extension_weixingtu" width="16" height="16"/>
+    </resources>
+</document>

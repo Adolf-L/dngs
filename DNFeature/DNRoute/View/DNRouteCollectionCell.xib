@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="DNRouteCollectionCellIden" id="KGk-i7-Jjw" customClass="DNRouteCollectionCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="113"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="112.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DNFeature.bundle/route_collect_detail" translatesAutoresizingMaskIntoConstraints="NO" id="AbJ-7H-Vhc">
+                        <rect key="frame" x="16" y="8" width="22" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="eyC-Cm-gT8"/>
+                            <constraint firstAttribute="width" constant="22" id="ltS-a6-0ET"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="路线" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NoI-lK-mXq">
+                        <rect key="frame" x="48" y="9.5" width="33" height="19.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="132" id="h17-NE-dhE"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01/01 12:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vwe-Nr-ZTk">
+                        <rect key="frame" x="85" y="10.5" width="74.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sxT-nJ-lki">
+                        <rect key="frame" x="32" y="35" width="327" height="76.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tableView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Ck-6r-gVQ">
+                        <rect key="frame" x="16" y="111.5" width="359" height="1"/>
+                        <color key="backgroundColor" red="0.85098039219999999" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="U8o-bU-hoS" customClass="NSLayoutConstraintOnePixelLine"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6s-4E-VZN">
+                        <rect key="frame" x="280" y="69.5" width="90" height="40"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="90" id="3SB-hB-Nka"/>
+                            <constraint firstAttribute="height" constant="40" id="qyb-L0-Rgu"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <inset key="titleEdgeInsets" minX="-10" minY="0.0" maxX="25" maxY="0.0"/>
+                        <inset key="imageEdgeInsets" minX="62" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <state key="normal" title="查看详情" image="DNFeature.bundle/route_collect_detail_open">
+                            <color key="titleColor" red="0.12941176470588234" green="0.58823529411764708" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <state key="selected" title="收起详情" image="DNFeature.bundle/route_collect_detail_close"/>
+                        <connections>
+                            <action selector="showPathDetail:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="mqK-GM-hDv"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJN-3t-s6P">
+                        <rect key="frame" x="309" y="4" width="50" height="30"/>
+                        <color key="backgroundColor" red="0.0039215686269999999" green="0.82352941180000006" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="tVU-S9-6ZN"/>
+                            <constraint firstAttribute="width" constant="50" id="tYj-gx-pvn"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <state key="normal" title="使用">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="addPathForRoute:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="5I4-lZ-dI6"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="3Ck-6r-gVQ" firstAttribute="top" secondItem="sxT-nJ-lki" secondAttribute="bottom" id="2La-kI-M0C"/>
+                    <constraint firstAttribute="trailing" secondItem="sxT-nJ-lki" secondAttribute="trailing" constant="16" id="4YV-1e-JZs"/>
+                    <constraint firstItem="sxT-nJ-lki" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="7Ne-Vr-Vba"/>
+                    <constraint firstItem="3Ck-6r-gVQ" firstAttribute="leading" secondItem="AbJ-7H-Vhc" secondAttribute="leading" id="7rl-ip-A96"/>
+                    <constraint firstItem="vwe-Nr-ZTk" firstAttribute="leading" secondItem="NoI-lK-mXq" secondAttribute="trailing" constant="4" id="AV8-IK-kp2"/>
+                    <constraint firstItem="sxT-nJ-lki" firstAttribute="top" secondItem="NoI-lK-mXq" secondAttribute="bottom" constant="6" id="Aj1-0Y-SAu"/>
+                    <constraint firstItem="AbJ-7H-Vhc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Lee-2l-Tvt"/>
+                    <constraint firstItem="AbJ-7H-Vhc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="QTp-kX-I1D"/>
+                    <constraint firstAttribute="trailing" secondItem="j6s-4E-VZN" secondAttribute="trailing" constant="5" id="TD2-VN-mSD"/>
+                    <constraint firstItem="NoI-lK-mXq" firstAttribute="centerY" secondItem="AbJ-7H-Vhc" secondAttribute="centerY" id="VDE-FG-W3s"/>
+                    <constraint firstAttribute="trailing" secondItem="3Ck-6r-gVQ" secondAttribute="trailing" id="Y0d-a9-cEr"/>
+                    <constraint firstItem="3Ck-6r-gVQ" firstAttribute="top" secondItem="j6s-4E-VZN" secondAttribute="bottom" constant="2" id="dfZ-PF-T3u"/>
+                    <constraint firstItem="sJN-3t-s6P" firstAttribute="centerY" secondItem="AbJ-7H-Vhc" secondAttribute="centerY" id="g3R-y8-Usc"/>
+                    <constraint firstAttribute="bottom" secondItem="3Ck-6r-gVQ" secondAttribute="bottom" id="vdN-kl-o0o"/>
+                    <constraint firstItem="NoI-lK-mXq" firstAttribute="leading" secondItem="AbJ-7H-Vhc" secondAttribute="trailing" constant="10" id="y0g-Tg-9Zi"/>
+                    <constraint firstAttribute="trailing" secondItem="sJN-3t-s6P" secondAttribute="trailing" constant="16" id="yci-vI-3aB"/>
+                    <constraint firstItem="vwe-Nr-ZTk" firstAttribute="centerY" secondItem="AbJ-7H-Vhc" secondAttribute="centerY" id="zDR-Qo-NBR"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="maxTitleLabelWidth" destination="h17-NE-dhE" id="5Gf-BZ-MMH"/>
+                <outlet property="pointsTable" destination="sxT-nJ-lki" id="mgI-tf-sh6"/>
+                <outlet property="showDetailBtn" destination="j6s-4E-VZN" id="UnK-S8-Ra5"/>
+                <outlet property="timeLabel" destination="vwe-Nr-ZTk" id="Qtz-H3-buT"/>
+                <outlet property="titleLabel" destination="NoI-lK-mXq" id="hpP-hA-6y6"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="67.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="DNFeature.bundle/route_collect_detail" width="16" height="16"/>
+        <image name="DNFeature.bundle/route_collect_detail_close" width="16" height="16"/>
+        <image name="DNFeature.bundle/route_collect_detail_open" width="16" height="16"/>
+    </resources>
+</document>

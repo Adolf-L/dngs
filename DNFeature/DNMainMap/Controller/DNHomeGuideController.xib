@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DNHomeGuideController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DNFeature.bundle/guide_home_img1" translatesAutoresizingMaskIntoConstraints="NO" id="inT-Wg-Jzg">
+                    <rect key="frame" x="0.0" y="22" width="375" height="162.5"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DNFeature.bundle/guide_home_img2" translatesAutoresizingMaskIntoConstraints="NO" id="f7j-R4-XRT">
+                    <rect key="frame" x="0.0" y="389" width="375" height="206"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XMo-q4-cto">
+                    <rect key="frame" x="132.5" y="295.5" width="110" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="qxp-AC-qEb"/>
+                        <constraint firstAttribute="width" constant="110" id="uSe-bN-Qgz"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="我知道了">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="18"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderUIColor">
+                            <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="onBack:" destination="-1" eventType="touchUpInside" id="Vgl-bv-INY"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.11372549019607843" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="XMo-q4-cto" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="1D7-7j-HJx"/>
+                <constraint firstItem="inT-Wg-Jzg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="22" id="D21-EF-K8o"/>
+                <constraint firstAttribute="trailing" secondItem="f7j-R4-XRT" secondAttribute="trailing" id="GqY-iI-bXc"/>
+                <constraint firstAttribute="bottom" secondItem="f7j-R4-XRT" secondAttribute="bottom" constant="72" id="JxV-T2-jCw"/>
+                <constraint firstItem="f7j-R4-XRT" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.309" id="ScW-wr-uTY"/>
+                <constraint firstItem="inT-Wg-Jzg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="X5s-1d-aD9"/>
+                <constraint firstItem="XMo-q4-cto" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-20" id="bNv-iE-zA2"/>
+                <constraint firstItem="inT-Wg-Jzg" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.244" id="bSl-Vv-yvJ"/>
+                <constraint firstAttribute="trailing" secondItem="inT-Wg-Jzg" secondAttribute="trailing" id="hcR-BD-g4U"/>
+                <constraint firstItem="f7j-R4-XRT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mhe-Ah-mZl"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="86.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="DNFeature.bundle/guide_home_img1" width="16" height="16"/>
+        <image name="DNFeature.bundle/guide_home_img2" width="16" height="16"/>
+    </resources>
+</document>

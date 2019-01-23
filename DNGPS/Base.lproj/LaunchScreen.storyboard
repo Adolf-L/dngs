@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="K3A-er-XFE"/>
+                        <viewControllerLayoutGuide type="bottom" id="p0i-X8-UdG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2018 Daniu. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fE-sJ-kAp">
+                                <rect key="frame" x="62.5" y="632.5" width="250" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="大牛GPS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bf-fO-hmE">
+                                <rect key="frame" x="177.5" y="597" width="64.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.11372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="first_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="ndk-6f-zbS">
+                                <rect key="frame" x="137.5" y="586.5" width="40" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="MFH-kM-MEY"/>
+                                    <constraint firstAttribute="height" constant="40" id="bAb-K7-cTl"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ndk-6f-zbS" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" constant="-30" id="0t1-4h-slB"/>
+                            <constraint firstItem="7fE-sJ-kAp" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ErT-Q4-Qew"/>
+                            <constraint firstItem="p0i-X8-UdG" firstAttribute="top" secondItem="7fE-sJ-kAp" secondAttribute="bottom" constant="20" id="aLw-aB-CFi"/>
+                            <constraint firstItem="6bf-fO-hmE" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" constant="22" id="eNr-4B-Qre"/>
+                            <constraint firstItem="6bf-fO-hmE" firstAttribute="centerY" secondItem="ndk-6f-zbS" secondAttribute="centerY" id="lGP-oc-m68"/>
+                            <constraint firstItem="7fE-sJ-kAp" firstAttribute="top" secondItem="ndk-6f-zbS" secondAttribute="bottom" constant="6" id="mCQ-ht-mz8"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="first_logo.png" width="120" height="120"/>
+    </resources>
+</document>

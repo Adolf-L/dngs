@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DNRouteGuideController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DNFeature.bundle/guide_route_img1" translatesAutoresizingMaskIntoConstraints="NO" id="2Xm-rw-Xkc">
+                    <rect key="frame" x="0.0" y="20" width="375" height="301"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwZ-Q5-oYU">
+                    <rect key="frame" x="133" y="355.5" width="110" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="R0T-ir-KkC"/>
+                        <constraint firstAttribute="width" constant="110" id="c6I-UZ-ZkX"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="我知道了">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="18"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderUIColor">
+                            <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="onBack:" destination="-1" eventType="touchUpInside" id="bYO-UY-9hg"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DNFeature.bundle/guide_route_img2" translatesAutoresizingMaskIntoConstraints="NO" id="oCZ-9h-XRq">
+                    <rect key="frame" x="0.0" y="452" width="375" height="177"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.11372549019607843" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="pwZ-Q5-oYU" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="40" id="10h-1I-fRj"/>
+                <constraint firstAttribute="bottom" secondItem="oCZ-9h-XRq" secondAttribute="bottom" constant="38" id="3vl-uv-5Ud"/>
+                <constraint firstAttribute="trailing" secondItem="oCZ-9h-XRq" secondAttribute="trailing" id="5qK-rO-wBh"/>
+                <constraint firstItem="pwZ-Q5-oYU" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8oc-9q-hBM"/>
+                <constraint firstItem="oCZ-9h-XRq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="D36-1O-uKA"/>
+                <constraint firstAttribute="trailing" secondItem="2Xm-rw-Xkc" secondAttribute="trailing" id="IYu-pj-HBh"/>
+                <constraint firstItem="oCZ-9h-XRq" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.265" id="NTY-7f-PTp"/>
+                <constraint firstItem="2Xm-rw-Xkc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="TgG-jj-jOk"/>
+                <constraint firstItem="2Xm-rw-Xkc" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.451" id="dz2-Xr-iKo"/>
+                <constraint firstItem="2Xm-rw-Xkc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="u6S-TU-3pl"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="DNFeature.bundle/guide_route_img1" width="16" height="16"/>
+        <image name="DNFeature.bundle/guide_route_img2" width="16" height="16"/>
+    </resources>
+</document>
